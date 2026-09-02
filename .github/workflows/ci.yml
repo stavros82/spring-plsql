@@ -20,9 +20,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+          cache-dependency-path: app/pom.xml
 
       - name: Build with Maven & Run Tests
-        run: mvn clean verify -B
+        run: mvn clean verify -B -f app/pom.xml
 
       - name: Upload Test Report
         if: always()
