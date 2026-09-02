@@ -1,7 +1,15 @@
 Markdown
 # Spring Boot 3.x + Oracle 23c PL/SQL Integration Architecture
 
-A production-ready reference environment integrating Spring Boot 3.3.2 with Oracle Database 23c Free using Liquibase migrations, PL/SQL package procedures returning `SYS_REFCURSOR`, custom exception mapping (`ORA-20001`), and Testcontainers integration testing.
+A robust, end-to-end reference architecture demonstrating enterprise integration between Spring Boot 3.3.2 (Java 21) and Oracle Database 23c Free. 
+
+Key Architectural Highlights:
+• Multi-Module Maven Structure: Clean isolation of application code and database migration resources.
+• Database Schema Orchestration: Liquibase-managed database changelogs supporting .pks and .pkb PL/SQL package deployments.
+• Efficient Data Access: Spring JDBC SimpleJdbcCall integration optimized for PL/SQL procedures returning SYS_REFCURSOR dataset outputs.
+• Resilient Error Handling: Custom Spring Exception Translation mapping domain-specific PL/SQL errors (ORA-20001).
+• Automated Integration Testing: Isolated end-to-end test suites powered by Testcontainers running real Oracle 23c instances.
+• Containerized Deployment: Multi-stage Docker builds orchestrated via Docker Compose with health-check dependency management.
 
 ---
 
