@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="order-processor-spec" author="stavros" runOnChange="true">
+        <sqlFile path="db/changelog/repeatable/packages/order_processor.pks"
+                 relativeToChangelogFile="false"
+                 splitStatements="false"
+                 endDelimiter="/"/>
+    </changeSet>
+
+    <changeSet id="order-processor-body" author="stavros" runOnChange="true">
+        <sqlFile path="db/changelog/repeatable/packages/order_processor.pkb"
+                 relativeToChangelogFile="false"
+                 splitStatements="false"
+                 endDelimiter="/"/>
+    </changeSet>
+
+</databaseChangeLog>
